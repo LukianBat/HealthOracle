@@ -1,26 +1,21 @@
 package com.memebattle.template.features
 
+import android.content.pm.ActivityInfo
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.memebattle.msnl.IOnBackPressed
-import com.memebattle.msnl.MSFragmentManager
+import androidx.navigation.NavController
+import androidx.navigation.Navigation
 import com.memebattle.template.R
-import com.memebattle.template.features.auth.AuthFlowFragment
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var msFragmentManager: MSFragmentManager
-
+    lateinit var navController: NavController
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        msFragmentManager = MSFragmentManager(supportFragmentManager)
-        msFragmentManager.globalContainerId = R.id.activity_container_id
-        msFragmentManager.addGlobal(AuthFlowFragment())
+        requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE
+        navController = Navigation.findNavController(this, R.id.nav_host_main)
+
     }
 
-    override fun onBackPressed() {
-        val fragment = this.supportFragmentManager.findFragmentById(R.id.activity_container_id)
-        (fragment as? IOnBackPressed)?.onBackPressed()
-    }
 }

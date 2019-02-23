@@ -11,7 +11,7 @@ import com.memebattle.template.core.di.core.module.RetrofitModule
 
 class DaggerComponentHelper(url: String) {
 
-    private val appComponent = DaggerAppComponent.builder()
+    val appComponent = DaggerAppComponent.builder()
             .appModule(AppModule(App.instance))
             .retrofitModule(RetrofitModule(url))
             .build()

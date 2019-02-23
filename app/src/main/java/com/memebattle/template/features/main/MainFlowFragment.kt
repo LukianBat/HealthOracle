@@ -5,15 +5,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.memebattle.msnl.IOnBackPressed
-import com.memebattle.msnl.MSNavigation
-import com.memebattle.msnl.msFragmentManager
+import androidx.navigation.NavController
+import androidx.navigation.Navigation
 import com.memebattle.template.App
 import com.memebattle.template.R
-import kotlinx.android.synthetic.main.flow_fragment_main.view.*
 
-class MainFlowFragment : Fragment(), IOnBackPressed {
-
+class MainFlowFragment : Fragment() {
+    private lateinit var navController : NavController
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         App.instance.daggerComponentHelper.plusMainComponent()
@@ -26,15 +24,9 @@ class MainFlowFragment : Fragment(), IOnBackPressed {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
-        val v = inflater.inflate(R.layout.flow_fragment_main, container, false)
-        msFragmentManager.localContainerId = R.id.main_container_id
-        val fragments = arrayListOf<Fragment>()
-        MSNavigation.setupNavigation(msFragmentManager, v.bottomNavigationView, fragments)
-        return v
+        navController = Navigation.findNavController(activity!!, R.id.nav_host_main)
+        navController.navigate(R.id.action_mainFlowFragment_to_gameFlowFragment)
+        return inflater.inflate(R.layout.flow_fragment_main, container, false)
     }
 
-    override fun onBackPressed(): Boolean {
-        MSNavigation.onBackPressed()
-        return true
-    }
 }

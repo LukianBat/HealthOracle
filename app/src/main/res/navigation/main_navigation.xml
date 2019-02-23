@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/mainFlowFragment">
+
+    <fragment
+        android:id="@+id/mainFlowFragment"
+        android:name="com.memebattle.template.features.main.MainFlowFragment"
+        android:label="flow_fragment_main"
+        tools:layout="@layout/flow_fragment_main" >
+        <action
+            android:id="@+id/action_mainFlowFragment_to_signInFragment"
+            app:destination="@id/signInFragment" />
+        <action
+            android:id="@+id/action_mainFlowFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+        <action
+            android:id="@+id/action_mainFlowFragment_to_gameFlowFragment"
+            app:destination="@id/gameFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameFragment"
+        android:name="com.memebattle.template.features.game.presentation.GameFragment"
+        android:label="game_flow_fragment"
+        tools:layout="@layout/game_fragment" />
+    <fragment
+        android:id="@+id/educationFragment"
+        android:name="com.memebattle.template.features.education.EducationFragment"
+        android:label="fragment_education"
+        tools:layout="@layout/fragment_education" >
+        <action
+            android:id="@+id/action_educationFragment_to_gameFlowFragment"
+            app:destination="@id/gameFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signInFragment"
+        android:name="com.memebattle.template.features.auth.fragment.sign_in.SignInFragment"
+        android:label="SignInFragment" >
+        <action
+            android:id="@+id/action_signInFragment_to_educationFragment"
+            app:destination="@id/educationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.memebattle.template.features.auth.fragment.sign_up.SignUpFragment"
+        android:label="SignUpFragment" >
+        <action
+            android:id="@+id/action_signUpFragment_to_educationFragment"
+            app:destination="@id/educationFragment" />
+    </fragment>
+</navigation>

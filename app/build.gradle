@@ -34,11 +34,13 @@ dependencies {
     //livedata
     implementation 'androidx.lifecycle:lifecycle-extensions:2.0.0'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.0.0'
     kapt 'androidx.lifecycle:lifecycle-compiler:2.0.0'
 
-    //room
-    implementation 'androidx.room:room-runtime:2.1.0-alpha03'
-    kapt 'androidx.room:room-compiler:2.1.0-alpha03'
+    //Room
+    implementation "android.arch.persistence.room:runtime:1.1.1"
+    implementation "android.arch.persistence.room:rxjava2:1.1.1"
+    kapt "android.arch.persistence.room:compiler:1.1.1"
 
     //navgraph
     implementation 'android.arch.navigation:navigation-fragment:1.0.0-alpha09'
@@ -62,6 +64,10 @@ dependencies {
     //gold extensions
     implementation 'com.github.MrSwimmer:GoldExtensions:1.0'
 
-    //multistack navigation
-    implementation 'com.github.MrSwimmer:MSNL:alpha-1.0'
+    //RxJava
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.2'
+    implementation 'io.reactivex.rxjava2:rxjava:2.1.16'
+
+    implementation 'com.github.bumptech.glide:glide:4.4.0'
+    kapt 'com.github.bumptech.glide:compiler:4.4.0'
 }

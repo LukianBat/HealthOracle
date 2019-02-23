@@ -7,7 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
+import com.memebattle.template.App
 import com.memebattle.template.R
+import kotlinx.android.synthetic.main.fragment_sign_up.*
 import kotlinx.android.synthetic.main.fragment_sign_up.view.*
 
 class SignUpFragment : Fragment() {
@@ -16,15 +18,27 @@ class SignUpFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
-        val v = inflater.inflate(R.layout.fragment_sign_up, container, false)
         viewModel = ViewModelProviders.of(this).get(SignUpViewModel::class.java)
 
-        v.backButton.setOnClickListener {
+        return inflater.inflate(R.layout.fragment_sign_up, container, false)
+    }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        App.instance.daggerComponentHelper.plusAuthComponent()
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        App.instance.daggerComponentHelper.removeAuthComponent()
+    }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        backButton.setOnClickListener {
 
         }
-        v.mainButton.setOnClickListener {
+        mainButton.setOnClickListener {
 
         }
-        return v
     }
 }
