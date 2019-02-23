@@ -21,9 +21,7 @@ class SignUpViewModel: ViewModel() {
     @Inject
     lateinit var authSettingsService: AuthSettingsService
 
-    init {
-        App.instance.daggerComponentHelper.authComponent!!.inject(this)
-    }
+
 
     fun signUp(name: String) {
         val userReq = UserReq(name)

@@ -28,15 +28,6 @@ class SignInFragment : Fragment() {
         })
         return inflater.inflate(R.layout.fragment_sign_in, container, false)
     }
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        App.instance.daggerComponentHelper.plusAuthComponent()
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        App.instance.daggerComponentHelper.removeAuthComponent()
-    }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         gotoSignUpButton.setOnClickListener {

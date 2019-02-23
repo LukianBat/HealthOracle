@@ -23,15 +23,6 @@ class SignUpFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_sign_up, container, false)
     }
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        App.instance.daggerComponentHelper.plusAuthComponent()
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        App.instance.daggerComponentHelper.removeAuthComponent()
-    }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         backButton.setOnClickListener {

@@ -10,7 +10,7 @@ import retrofit2.Response
 
 class GameApiService(var api: ApiGame) {
 
-    fun getLinks(callback : BaseCallback<LinksModel>) {
+    fun getLinks(callback: BaseCallback<LinksModel>) {
         api.getLinks().enqueue(object : Callback<LinksModel> {
             override fun onFailure(call: Call<LinksModel>, t: Throwable) {
 
@@ -21,9 +21,11 @@ class GameApiService(var api: ApiGame) {
             }
         })
     }
-    fun getWords(callback : BaseCallback<WordsModel>) {
+
+    fun getWords(callback: BaseCallback<WordsModel>) {
         api.getWords().enqueue(object : Callback<WordsModel> {
             override fun onFailure(call: Call<WordsModel>, t: Throwable) {
+
             }
 
             override fun onResponse(call: Call<WordsModel>, response: Response<WordsModel>) {

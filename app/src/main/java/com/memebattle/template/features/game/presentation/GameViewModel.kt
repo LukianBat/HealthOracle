@@ -13,13 +13,13 @@ class GameViewModel : ViewModel() {
     lateinit var gameApiService: GameApiService
 
     init {
-        App.instance.daggerComponentHelper.appComponent.inject(this)
+        App.appComponent.inject(this)
     }
 
     fun getLinks(callback: BaseCallback<ArrayList<String>>) {
         gameApiService.getLinks(object : BaseCallback<LinksModel> {
             override fun onSuccess(data: LinksModel?) {
-                callback.onSuccess(data!!.links)
+                callback.onSuccess(data!!.link)
             }
 
             override fun onError(t: Throwable) {

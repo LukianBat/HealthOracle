@@ -12,15 +12,7 @@ import com.memebattle.template.R
 
 class MainFlowFragment : Fragment() {
     private lateinit var navController : NavController
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        App.instance.daggerComponentHelper.plusMainComponent()
-    }
 
-    override fun onDestroy() {
-        super.onDestroy()
-        App.instance.daggerComponentHelper.removeMainComponent()
-    }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
