@@ -24,7 +24,7 @@
         android:id="@+id/gameFragment"
         android:name="com.memebattle.template.features.game.presentation.GameFragment"
         android:label="game_flow_fragment"
-        tools:layout="@layout/game_fragment" />
+        tools:layout="@layout/fragment_game" />
     <fragment
         android:id="@+id/educationFragment"
         android:name="com.memebattle.template.features.education.EducationFragment"
@@ -36,7 +36,7 @@
     </fragment>
     <fragment
         android:id="@+id/signInFragment"
-        android:name="com.memebattle.template.features.auth.fragment.sign_in.SignInFragment"
+        android:name="com.memebattle.template.features.sign_in.SignInFragment"
         android:label="SignInFragment" >
         <action
             android:id="@+id/action_signInFragment_to_educationFragment"
@@ -44,7 +44,7 @@
     </fragment>
     <fragment
         android:id="@+id/signUpFragment"
-        android:name="com.memebattle.template.features.auth.fragment.sign_up.SignUpFragment"
+        android:name="com.memebattle.template.features.sign_up.SignUpFragment"
         android:label="SignUpFragment" >
         <action
             android:id="@+id/action_signUpFragment_to_educationFragment"

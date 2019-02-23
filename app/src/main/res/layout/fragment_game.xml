@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:baselineAligned="false"
+    android:orientation="vertical"
+    tools:context=".features.game.presentation.GameFragment">
+
+    <LinearLayout
+        android:paddingTop="10dp"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:background="@drawable/border_shape"
+                android:id="@+id/imageSecretFirst"
+                android:layout_width="170dp"
+                android:layout_height="140dp"
+                app:srcCompat="@drawable/secret_shape" />
+
+            <TextView
+                android:id="@+id/textFirst"
+                android:layout_width="170dp"
+                android:layout_height="50dp"
+                android:layout_gravity=""
+                android:background="@drawable/border_shape"
+                android:padding="10dp"
+                android:text="text"
+                android:textAlignment="center"
+                android:textSize="24sp"
+                android:typeface="monospace" />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:background="@drawable/border_shape"
+                android:id="@+id/imageSecretSec"
+                android:layout_width="170dp"
+                android:layout_height="140dp"
+                app:srcCompat="@drawable/secret_shape" />
+
+            <TextView
+                android:id="@+id/textSec"
+                android:layout_width="170dp"
+                android:layout_height="50dp"
+                android:layout_gravity=""
+                android:background="@drawable/border_shape"
+                android:padding="10dp"
+                android:text="text"
+                android:textAlignment="center"
+                android:textSize="24sp"
+                android:typeface="monospace" />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:background="@drawable/border_shape"
+                android:id="@+id/imageSecretThird"
+                android:layout_width="170dp"
+                android:layout_height="140dp"
+                app:srcCompat="@drawable/secret_shape" />
+
+            <TextView
+                android:id="@+id/textThird"
+                android:layout_width="170dp"
+                android:layout_height="50dp"
+                android:layout_gravity=""
+                android:background="@drawable/border_shape"
+                android:padding="10dp"
+                android:text="text"
+                android:textAlignment="center"
+                android:textSize="24sp"
+                android:typeface="monospace" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:paddingTop="20dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal" >
+        <ImageView
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/border_shape"
+            android:id="@+id/imageFirst"
+            android:layout_width="170dp"
+            android:layout_height="160dp"
+            app:srcCompat="@drawable/secret_shape" />
+        <ImageView
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/border_shape"
+            android:id="@+id/imageSec"
+            android:layout_width="170dp"
+            android:layout_height="160dp"
+            app:srcCompat="@drawable/secret_shape" />
+        <ImageView
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/border_shape"
+            android:id="@+id/imageThird"
+            android:layout_width="170dp"
+            android:layout_height="160dp"
+            app:srcCompat="@drawable/secret_shape" />
+    </LinearLayout>
+</LinearLayout>

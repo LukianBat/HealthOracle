@@ -16,9 +16,11 @@ class CustomImageView @JvmOverloads constructor(context: Context, attrs: Attribu
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
         inflater.inflate(R.layout.custom_image_view_item, this)
     }
-    fun setData(imageCard: ImageCardModel) {
-        word.text = imageCard.text
-        image.setImageResource(imageCard.image)
+    fun setText(text: String) {
+
+    }
+    fun setImage(image : Int){
+
     }
 
 }

@@ -11,7 +11,7 @@ import android.widget.ImageView
 import com.bumptech.glide.Glide
 
 import com.memebattle.template.core.domain.BaseCallback
-import kotlinx.android.synthetic.main.game_fragment.*
+import kotlinx.android.synthetic.main.fragment_game.*
 import com.memebattle.template.R
 import com.memebattle.template.features.game.domain.model.ImageCardModel
 
@@ -24,7 +24,7 @@ class GameFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         viewModel = ViewModelProviders.of(this).get(GameViewModel::class.java)
-        return inflater.inflate(R.layout.game_fragment, container, false)
+        return inflater.inflate(R.layout.fragment_game, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

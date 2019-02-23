@@ -1,10 +1,10 @@
-package com.memebattle.template.features.auth.core.domain.interactor
+package com.memebattle.template.core.domain.interactor
 
 import android.content.SharedPreferences
 
 class AuthSettingsService(var sharedPreferences: SharedPreferences) {
-    val ID = "id"
 
+    val ID = "id"
     val ERROR = "error"
 
     fun setId(id: String) {

@@ -17,7 +17,7 @@ class MainFlowFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         navController = Navigation.findNavController(activity!!, R.id.nav_host_main)
-        navController.navigate(R.id.action_mainFlowFragment_to_gameFlowFragment)
+        navController.navigate(R.id.action_mainFlowFragment_to_signInFragment)
         return inflater.inflate(R.layout.flow_fragment_main, container, false)
     }
 
